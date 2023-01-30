@@ -52,8 +52,6 @@ const IndianCities = ({ cities }) => (
   </div>
 );
 
-//export default IndianCities;
-
 
     </div>
   )
