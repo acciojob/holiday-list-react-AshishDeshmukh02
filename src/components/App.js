@@ -36,15 +36,25 @@ const App = () => {
   return (
     <div id="main">
                {/* Do not remove the main div */}
-                const indianCities = [
+                const assert = require('assert');
+const indianCities = [
   { name: 'Goa', country: 'India' },
   { name: 'Darjeeling', country: 'India' },
   { name: 'Lonavala', country: 'India' }
 ];
 
-indianCities.forEach((city, index) => {
-  console.log(`${index + 1}. ${city.name}, ${city.country}`);
+describe('Indian Cities', () => {
+  beforeEach(() => {
+    // Setting up the ordered list of cities
+    this.cities = indianCities;
+  });
+
+  it('should check length of ordered list of cities', () => {
+    // Testing the length of the list
+    assert.equal(this.cities.length, 3);
+  });
 });
+
     </div>
   )
 }
