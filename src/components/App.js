@@ -36,24 +36,24 @@ const App = () => {
   return (
     <div id="main">
                {/* Do not remove the main div */}
-                const assert = require('assert');
-const indianCities = [
-  { name: 'Goa', country: 'India' },
-  { name: 'Darjeeling', country: 'India' },
-  { name: 'Lonavala', country: 'India' }
-];
 
-describe('Indian Cities', () => {
-  beforeEach(() => {
-    // Setting up the ordered list of cities
-    this.cities = indianCities;
-  });
+const IndianCity = ({ name, country }) => (
+  <div key={`${name}, ${country}`}>
+    <p>{name}</p>
+    <p>{country}</p>
+  </div>
+);
 
-  it('should check length of ordered list of cities', () => {
-    // Testing the length of the list
-    assert.equal(this.cities.length, 3);
-  });
-});
+const IndianCities = ({ cities }) => (
+  <div>
+    {cities.map((city, index) => (
+      <IndianCity key={`location-${index + 1}`} name={city.name} country={city.country} />
+    ))}
+  </div>
+);
+
+//export default IndianCities;
+
 
     </div>
   )
