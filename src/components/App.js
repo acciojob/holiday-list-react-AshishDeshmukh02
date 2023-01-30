@@ -36,6 +36,15 @@ const App = () => {
   return (
     <div id="main">
                {/* Do not remove the main div */}
+                const indianCities = [
+  { name: 'Goa', country: 'India' },
+  { name: 'Darjeeling', country: 'India' },
+  { name: 'Lonavala', country: 'India' }
+];
+
+indianCities.forEach((city, index) => {
+  console.log(`${index + 1}. ${city.name}, ${city.country}`);
+});
     </div>
   )
 }
